@@ -1,6 +1,6 @@
 #!/bin/bash
 #$ -l h_fsize=100G
-#$ -O /dcs04/lieber/marmaypag/Allaway_mouseDlx_LIBD4125/SRA
+#$ -o /dcs04/lieber/marmaypag/Allaway_mouseDlx_LIBD4125/SRA
 #$ -m e
 #$ -M michael.totty@libd.org
 
