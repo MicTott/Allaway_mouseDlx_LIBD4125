@@ -1,6 +1,6 @@
 #!/bin/bash
-#$ -l mem_free=64G
-#$ -l h_vmem=64G
+#$ -l mem_free=400G
+#$ -l h_vmem=400G
 #$ -l h_fsize=200G
 #$ -o logs/mouseDLX_convert_SRA.txt
 #$ -e logs/mouseDLX_convert_SRA.txt
