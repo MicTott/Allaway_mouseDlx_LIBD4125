@@ -1,0 +1,12 @@
+**** Job starts ****
+Mon Feb  6 15:18:23 EST 2023
+**** JHPCE info ****
+User: mtotty
+Job id: 2901345
+Job name: s01_convert_SRA_to_FASTQ.sh
+Hostname: compute-057.cm.cluster
+Task id: undefined
+2023-02-06T20:18:24 fasterq-dump.2.10.8 err: name not found while resolving query within virtual file system module - failed to resolve accession '/dcs04/lieber/marmaypag/Shi_mouseAMY_LIBD4125/raw-data/SRA/SRR13402808' - Cannot resolve accession ( 404 )
+2023-02-06T20:18:24 fasterq-dump.2.10.8 err: invalid accession '/dcs04/lieber/marmaypag/Shi_mouseAMY_LIBD4125/raw-data/SRA/SRR13402808'
+**** Job ends ****
+Mon Feb  6 15:18:24 EST 2023
