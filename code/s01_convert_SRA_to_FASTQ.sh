@@ -2,8 +2,8 @@
 #$ -l mem_free=400G
 #$ -l h_vmem=400G
 #$ -l h_fsize=200G
-#$ -o logs/mouseDLX_convert_SRA.txt
-#$ -e logs/mouseDLX_convert_SRA.txt
+#$ -o logs/s01_convert_SRA_to_FASTQ.txt
+#$ -e logs/s01_convert_SRA_to_FASTQ.txt
 #$ -m e
 #$ -M michael.totty@libd.org
 
@@ -20,14 +20,10 @@ echo "Task id: ${SGE_TASK_ID}"
 # load SRAtoolkit
 module load sratoolkit
 
-# change directory to ensure local. sra files are found
-# otherwise, fastq-dump will re-download .sra files and take way longer
-/dcs04/lieber/marmaypag/Allaway_mouseDlx_LIBD4125/raw-data/SRA
-
 # -gzip created zipped file
 # --spilt-files to seperate forward and reverse reads into seperate files
 # -O output directory
-fastq-dump --gzip --split-files SRR13402808 -O /dcs04/lieber/marmaypag/Allaway_mouseDlx_LIBD4125/raw-data/FASTQ
+fasterq-dump --split-files /dcs04/lieber/marmaypag/Shi_mouseAMY_LIBD4125/raw-data/SRA/SRR13402808 -O /dcs04/lieber/marmaypag/Allaway_mouseDlx_LIBD4125/raw-data/FASTQ
 
 echo "**** Job ends ****"
 date
