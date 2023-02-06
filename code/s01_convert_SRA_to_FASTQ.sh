@@ -1,7 +1,9 @@
 #!/bin/bash
-#$ -l mem_free=32G
-#$ -l h_vmem=32G
-#$ -l h_fsize=200G
+#$ -cwd
+#$ -pe local 4
+#$ -l mem_free=8G
+#$ -l h_vmem=8G
+#$ -l h_fsize=300G
 #$ -o logs/s01_convert_SRA_to_FASTQ.txt
 #$ -e logs/s01_convert_SRA_to_FASTQ.txt
 #$ -m e
