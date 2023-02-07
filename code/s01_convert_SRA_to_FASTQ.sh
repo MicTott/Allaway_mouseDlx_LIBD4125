@@ -22,10 +22,13 @@ echo "Task id: ${SGE_TASK_ID}"
 # load SRAtoolkit
 module load sratoolkit
 
-# -gzip created zipped file
-# --spilt-files to seperate forward and reverse reads into seperate files
-# -O output directory
-fasterq-dump --split-files ./dcs04/lieber/marmaypag/Allaway_mouseDlx_LIBD4125/raw-data/SRA/SRR13402808 -O ./dcs04/lieber/marmaypag/Allaway_mouseDlx_LIBD4125/raw-data/FASTQ
+for f in SRR13402808 
+do
+    echo "Processing $f"
+    # --spilt-files to seperate forward and reverse reads into seperate files
+    # -O output directory
+    fasterq-dump --split-files /dcs04/lieber/marmaypag/Allaway_mouseDlx_LIBD4125/raw-data/SRA/$f -O /dcs04/lieber/marmaypag/Allaway_mouseDlx_LIBD4125/raw-data/FASTQ
+done
 
 echo "**** Job ends ****"
 date
